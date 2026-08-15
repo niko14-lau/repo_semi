@@ -1,0 +1,47 @@
+import Saludo from './components/Saludo';
+import TarjetaPerfil from './components/TarjetaPerfil';
+import Contador from './components/Contador';
+import ListaTareas from './components/ListaTareas';
+
+function App() {
+  const usuario1 = {
+    nombre: 'Ada Lovelace',
+    rol: 'Pionera de la Programación',
+    foto: 'https://placehold.co',
+  };
+
+  return (
+    <div style={{ padding: '20px', fontFamily: 'sans-serif' }}>
+      <h1>Actividad en Clase N.º 2</h1>
+      
+      {/* Parte 1 */}
+      <Saludo nombre="Valentina" />
+      <Saludo nombre="Tomás" />
+      <hr />
+
+      {/* Parte 2 */}
+      <div style={{ display: 'flex', gap: '10px', margin: '20px 0' }}>
+        <TarjetaPerfil
+          nombre={usuario1.nombre}
+          cargo={usuario1.rol}
+          imagen={usuario1.foto}
+        />
+        <TarjetaPerfil
+          nombre="Grace Hopper"
+          cargo="Inventora del compilador"
+          imagen="https://placehold.co"
+        />
+      </div>
+      <hr />
+
+      {/* Parte 3 */}
+      <Contador />
+      <hr />
+
+      {/* Parte 4 */}
+      <ListaTareas />
+    </div>
+  );
+}
+
+export default App;
